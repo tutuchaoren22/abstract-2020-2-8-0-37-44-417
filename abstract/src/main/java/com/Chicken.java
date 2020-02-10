@@ -1,6 +1,6 @@
 package com;
 
-public class Chicken {
+public abstract class Chicken {
     private String type;
     private double price;
 
@@ -12,6 +12,9 @@ public class Chicken {
         this.price = price;
     }
 
+    public abstract void setTypes() ;
+    public abstract void setPrices() ;
+
     public String getType() {
         return type;
     }
@@ -20,11 +23,13 @@ public class Chicken {
         this.type = type;
     }
 
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
     public double getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
+
 }
