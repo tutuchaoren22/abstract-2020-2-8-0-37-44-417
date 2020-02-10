@@ -1,35 +1,15 @@
 package com;
 
 public abstract class Chicken {
-    private String type;
-    private double price;
 
-    public Chicken() {
-    }
-
-    public Chicken(String type, double price) {
-        this.type = type;
-        this.price = price;
-    }
-
-    public abstract void setTypes() ;
-    public abstract void setPrices() ;
+    public abstract double getPrice();
 
     public String getType() {
-        return type;
+        return getClass().getSimpleName();
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void show() {
+        System.out.format("100元可以买%s %d只\n", this.getType(), (int) (100 / this.getPrice()));
     }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
 
 }
